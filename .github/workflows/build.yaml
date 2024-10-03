@@ -13,4 +13,4 @@ on:
 jobs:
   build_and_test:
     name: rest_api
-    uses: RustStudio/cargo_ci_template/.github/workflows/reusable_trifactor.yaml@master
+    uses: RustStudio/cargo_ci_template/.github/workflows/reusable_build.yaml@master
