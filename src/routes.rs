@@ -1,6 +1,6 @@
 // ===========================================================================
 /*
- * Copyright (C) 2019 Tan Jun Kiat
+ * Copyright (C) 2019 Rust Studio
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,15 +16,13 @@
  *
 */
 // ===========================================================================
-use warp::Filter;
 use super::handlers;
+use warp::Filter;
 
-// A function to build our routes
 pub fn routes() -> impl Filter<Extract = impl warp::Reply, Error = warp::Rejection> + Clone {
     get_post()
 }
 
-// A route to handle GET requests for a specific post
 fn get_post() -> impl Filter<Extract = impl warp::Reply, Error = warp::Rejection> + Clone {
     warp::path!("posts" / u64)
         .and(warp::get())
