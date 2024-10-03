@@ -1,6 +1,6 @@
 // ===========================================================================
 /*
- * Copyright (C) 2019 Tan Jun Kiat
+ * Copyright (C) 2019 Rust Studio
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,9 +16,9 @@
  *
 */
 // ===========================================================================
-mod routes;
 mod handlers;
 mod models;
+mod routes;
 
 #[tokio::main]
 async fn main() {

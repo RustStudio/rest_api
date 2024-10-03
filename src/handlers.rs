@@ -1,6 +1,6 @@
 // ===========================================================================
 /*
- * Copyright (C) 2019 Tan Jun Kiat
+ * Copyright (C) 2019 Rust Studio
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,9 +18,7 @@
 // ===========================================================================
 use super::models::Post;
 
-// A function to handle GET requests at /posts/{id}
 pub async fn get_post(id: u64) -> Result<impl warp::Reply, warp::Rejection> {
-    // For simplicity, let's say we are returning a static post
     let post = Post {
         id,
         title: String::from("Hello, Warp!"),
