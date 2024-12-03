@@ -24,6 +24,11 @@ mod routes;
 async fn main() {
     let routes = routes::routes();
 
-    println!("Server started at http://localhost:8000");
-    warp::serve(routes).run(([127, 0, 0, 1], 8000)).await;
+    println!("Server started at http://127.0.0.1:8000");
+    warp::serve(routes)
+        .tls()
+        .cert_path("tls/server/server.crt")
+        .key_path("tls/server/server.key")
+        .run(([127, 0, 0, 1], 8000))
+        .await;
 }
